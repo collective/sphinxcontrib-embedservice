@@ -3,4 +3,9 @@
 *.swp
 *.swo
 
-
+/bin/
+/docs/_build/
+/include/
+/lib/
+/share/
+/sphinxcontrib_embedservice.egg-info/

@@ -1,9 +1,21 @@
 
+from docutils import nodes
 
-from docutils.parsers.rst import directives
+class embed(nodes.Admonition, nodes.Element):
+    pass
 
-from garbas.rst.embededservices.bliptv import directive as bliptv
 
+def visit_html(self, node):
+    import ipdb; ipdb.set_trace()
+    self.body.append(self.starttag(node, 'math'))
+def depart_html(self, node):
+    import ipdb; ipdb.set_trace()
+    self.body.append('</math>')
 
-bliptv.content = True
-directives.register_directive('bliptv', bliptv)
+def setup(app):
+    app.add_node(embed, html=(visit_html, depart_html))
+
+    from bliptv import BlipTV
+    app.add_directive('embed-bliptv', BlipTV)
+
+    # TODO: Add more services ...
