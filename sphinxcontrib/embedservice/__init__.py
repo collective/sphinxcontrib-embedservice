@@ -6,10 +6,10 @@ class embed(nodes.Admonition, nodes.Element):
 
 
 def visit_html(self, node):
-    import ipdb; ipdb.set_trace()
+    #import ipdb; ipdb.set_trace()
     self.body.append(self.starttag(node, 'math'))
 def depart_html(self, node):
-    import ipdb; ipdb.set_trace()
+    #import ipdb; ipdb.set_trace()
     self.body.append('</math>')
 
 def setup(app):
