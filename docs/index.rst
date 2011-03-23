@@ -6,15 +6,12 @@
 Welcome to sphinxcontrib-embedservice's documentation!
 ======================================================
 
-Example bliptv:
-
-.. embed-bliptv:: AYHJzwEC
-
-
 Contents:
     
 .. toctree::
    :maxdepth: 2
+
+   examples
 
 Indices and tables
 ==================
